@@ -1,0 +1,75 @@
+:root {
+  --bg-light: #f4f4f4;
+  --bg-dark: #1f1f1f;
+  --text-light: #333;
+  --text-dark: #fff;
+  --card-bg-light: #fff;
+  --card-bg-dark: #2c2c2c;
+  --accent: #0077ff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+}
+
+.card {
+  background-color: var(--card-bg-light);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 320px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.profile-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  margin: 1rem 0 0.3rem;
+  font-size: 1.5rem;
+  color: var(--text-light);
+}
+
+.role {
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  color: var(--accent);
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+/* 🌒 Dark Mode (toggle manually with prefers-color-scheme) */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bg-dark);
+  }
+  .card {
+    background-color: var(--card-bg-dark);
+  }
+  .name, .role {
+    color: var(--text-dark);
+  }
+}
